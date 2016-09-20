@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest package="oxim.digital.mwmvp"
+<manifest package="oxim.digital.timmeh"
           xmlns:android="http://schemas.android.com/apk/res/android">
 
     <application
-        android:name=".application.MwMvpApplication"
+        android:name=".application.TimmehApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <activity android:name=".ui.main.MainActivity">
+        <activity android:name="oxim.digital.timmeh.ui.main.MainActivity">
 
         </activity>
 
-        <activity android:name=".ui.fragmented.FragmentHolderActivity">
+        <activity android:name="oxim.digital.timmeh.ui.fragmented.FragmentHolderActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
