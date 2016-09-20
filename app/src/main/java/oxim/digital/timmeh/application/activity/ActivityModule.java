@@ -7,11 +7,11 @@ import android.support.v4.app.FragmentManager;
 
 import dagger.Module;
 import dagger.Provides;
-import oxim.digital.timmeh.ui.MultiWindowPresenterRelay;
-import oxim.digital.timmeh.ui.PresenterRelay;
-import oxim.digital.timmeh.ui.SingleWindowPresenterRelay;
-import oxim.digital.timmeh.ui.router.Router;
-import oxim.digital.timmeh.ui.router.RouterImpl;
+import oxim.digital.timmeh.application.ui.MultiWindowPresenterRelay;
+import oxim.digital.timmeh.application.ui.PresenterRelay;
+import oxim.digital.timmeh.application.ui.SingleWindowPresenterRelay;
+import oxim.digital.timmeh.application.ui.router.Router;
+import oxim.digital.timmeh.application.ui.router.RouterImpl;
 
 @Module
 public final class ActivityModule {

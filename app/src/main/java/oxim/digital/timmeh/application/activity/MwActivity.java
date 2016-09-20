@@ -5,8 +5,8 @@ import android.support.annotation.NonNull;
 
 import javax.inject.Inject;
 
-import oxim.digital.timmeh.ui.PresenterRelay;
-import oxim.digital.timmeh.ui.ScopedPresenter;
+import oxim.digital.timmeh.application.ui.PresenterRelay;
+import oxim.digital.timmeh.application.ui.ScopedPresenter;
 
 public abstract class MwActivity extends DaggerActivity {
 

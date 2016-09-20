@@ -1,3 +1,18 @@
 <resources>
     <string name="app_name">TIMMEH</string>
+
+    <string name="main_title">Timmeh!</string>
+
+    <string name="Task">Task</string>
+    <string name="TaskSubtitle">Features &amp; Bugs</string>
+    <string name="Estimate">Estimate</string>
+    <string name="EstimateSubtitle">Better make it x2</string>
+    <string name="CodeReview">Code Review</string>
+    <string name="CodeReviewSubtitle">Finals, finals everywhere…</string>
+    <string name="Research">Research</string>
+    <string name="ResearchSubtitle">Yeah, science!</string>
+    <string name="Build">Build</string>
+    <string name="BuildSubtitle">:app:assembleTimmehRelease</string>
+    <string name="Meeting">Meeting</string>
+    <string name="MeetingSubtitle">Jel slobodno gore?</string>
 </resources>

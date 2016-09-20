@@ -6,7 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import javax.inject.Inject;
 
 import oxim.digital.timmeh.application.TimmehApplication;
-import oxim.digital.timmeh.ui.router.Router;
+import oxim.digital.timmeh.application.ui.router.Router;
 
 public abstract class DaggerActivity extends AppCompatActivity {
 

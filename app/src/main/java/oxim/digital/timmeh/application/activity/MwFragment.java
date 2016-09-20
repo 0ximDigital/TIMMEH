@@ -6,8 +6,8 @@ import android.util.Log;
 
 import javax.inject.Inject;
 
-import oxim.digital.timmeh.ui.PresenterRelay;
-import oxim.digital.timmeh.ui.ScopedPresenter;
+import oxim.digital.timmeh.application.ui.PresenterRelay;
+import oxim.digital.timmeh.application.ui.ScopedPresenter;
 
 public abstract class MwFragment extends DaggerFragment {
 

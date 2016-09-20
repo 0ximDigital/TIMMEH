@@ -10,16 +10,16 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <activity android:name="oxim.digital.timmeh.ui.main.MainActivity">
-
-        </activity>
-
-        <activity android:name="oxim.digital.timmeh.ui.fragmented.FragmentHolderActivity">
+        <activity android:name=".application.ui.main.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
+        </activity>
+
+        <activity android:name=".application.ui.fragmented.FragmentHolderActivity">
+
         </activity>
 
     </application>

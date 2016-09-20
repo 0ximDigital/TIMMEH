@@ -1,7 +1,7 @@
 package oxim.digital.timmeh.application.activity;
 
-import oxim.digital.timmeh.ui.fragmented.FragmentHolderActivity;
-import oxim.digital.timmeh.ui.main.MainActivity;
+import oxim.digital.timmeh.application.ui.fragmented.FragmentHolderActivity;
+import oxim.digital.timmeh.application.ui.main.MainActivity;
 
 public interface ActivityComponentInjects {
 
