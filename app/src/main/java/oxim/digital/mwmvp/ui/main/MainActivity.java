@@ -12,10 +12,10 @@ import butterknife.Bind;
 import butterknife.ButterKnife;
 import oxim.digital.mwmvp.R;
 import oxim.digital.mwmvp.application.activity.ActivityComponent;
-import oxim.digital.mwmvp.application.activity.DaggerActivity;
+import oxim.digital.mwmvp.application.activity.MwActivity;
 import oxim.digital.mwmvp.ui.ScopedPresenter;
 
-public class MainActivity extends DaggerActivity implements MainContract.View {
+public class MainActivity extends MwActivity implements MainContract.View {
 
     @Inject
     MainContract.Presenter presenter;
