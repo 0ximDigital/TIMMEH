@@ -9,6 +9,8 @@ import javax.inject.Inject;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
+import butterknife.OnCheckedChanged;
+import butterknife.OnClick;
 import oxim.digital.timmeh.R;
 import oxim.digital.timmeh.application.activity.ActivityComponent;
 import oxim.digital.timmeh.application.activity.MwActivity;
@@ -51,15 +53,17 @@ public class MainActivity extends MwActivity implements MainContract.View {
     }
 
     @Override
-    public void runTask() {
-    }
-
-    @Override
-    public void stopTask() {
+    public void showNewLoggableItemDialog() {
+        // TODO
     }
 
     @Override
     public void showMessage(final String message) {
         Snackbar.make(findViewById(R.id.content_root), message, Snackbar.LENGTH_SHORT).show();
+    }
+
+    @OnClick(R.id.add_loggable_item_button)
+    public void onAddLoggableItemClick() {
+        presenter.addLoggableItem(viewPager.getCurrentItem());
     }
 }

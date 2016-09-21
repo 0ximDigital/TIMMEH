@@ -7,13 +7,12 @@ public interface MainContract {
 
     interface View extends BaseView {
 
-        void runTask();
-
-        void stopTask();
+        void showNewLoggableItemDialog();
 
     }
 
     interface Presenter extends ScopedPresenter<View> {
 
+        void addLoggableItem(int loggableId);
     }
 }
