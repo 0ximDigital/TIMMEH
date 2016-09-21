@@ -1,4 +1,4 @@
-package oxim.digital.timmeh.application.ui.LoggableFragment;
+package oxim.digital.timmeh.application.ui.loggableFragment;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;

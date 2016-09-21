@@ -1,14 +1,13 @@
-package oxim.digital.timmeh.application.ui.loggableFragment;
+package oxim.digital.timmeh.application.ui.newLoggableItem;
 
 import oxim.digital.timmeh.application.ui.BaseView;
 import oxim.digital.timmeh.application.ui.ScopedPresenter;
-import oxim.digital.timmeh.data.model.LoggableViewModel;
 
-public interface LoggableContract {
+public interface NewLoggableItemContract {
 
     interface View extends BaseView {
 
-        void fillView(LoggableViewModel loggableViewModel);
+        void remove();
 
     }
 
@@ -16,5 +15,6 @@ public interface LoggableContract {
 
         void start(String loggableKey);
 
+        void closeScreen();
     }
 }

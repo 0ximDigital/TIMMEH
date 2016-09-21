@@ -12,7 +12,7 @@
     <string name="Research">Research</string>
     <string name="ResearchSubtitle">Yeah, science!</string>
     <string name="Build">Build</string>
-    <string name="BuildSubtitle">:app:assembleTimmehRelease</string>
+    <string name="BuildSubtitle">:app:assembleKillerAppRelease</string>
     <string name="Meeting">Meeting</string>
-    <string name="MeetingSubtitle">Jel slobodno gore?</string>
+    <string name="MeetingSubtitle">Yaay teamwork</string>
 </resources>

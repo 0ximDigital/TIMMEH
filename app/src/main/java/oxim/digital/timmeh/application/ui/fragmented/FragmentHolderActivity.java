@@ -23,10 +23,7 @@ public final class FragmentHolderActivity extends DaggerActivity {
         ButterKnife.bind(this);
 
         if (savedInstanceState == null) {
-            final Fragment fragment = MainFragment.newInstance();
-            fragmentManager.beginTransaction()
-                           .add(R.id.fragment_container, fragment)
-                           .commit();
+            // Add fragment
         }
     }
 

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="RevealFillView">
+        <attr name="revealFillColor" format="color"/>
+        <attr name="radius" format="dimension"/>
+        <attr name="animationDuration" format="integer"/>
+        <attr name="handleClick" format="boolean"/>
+    </declare-styleable>
+
+</resources>

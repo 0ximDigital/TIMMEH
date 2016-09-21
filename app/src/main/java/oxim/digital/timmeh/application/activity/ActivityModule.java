@@ -12,6 +12,9 @@ import oxim.digital.timmeh.application.ui.PresenterRelay;
 import oxim.digital.timmeh.application.ui.SingleWindowPresenterRelay;
 import oxim.digital.timmeh.application.ui.router.Router;
 import oxim.digital.timmeh.application.ui.router.RouterImpl;
+import oxim.digital.timmeh.application.ui.router.loggables.LoggablesRouter;
+import oxim.digital.timmeh.application.ui.router.loggables.LoggablesRouterHolder;
+import oxim.digital.timmeh.application.ui.router.loggables.LoggablesRouterImpl;
 
 @Module
 public final class ActivityModule {
@@ -57,6 +60,16 @@ public final class ActivityModule {
         }
     }
 
+    @Provides
+    @ActivityScope
+    LoggablesRouter provideLoggablesRouter(final FragmentManager fragmentManager) {
+        if (daggerActivity instanceof LoggablesRouterHolder) {
+            return new LoggablesRouterImpl(fragmentManager, ((LoggablesRouterHolder) daggerActivity).provideContainerId());
+        } else {
+            throw new RuntimeException("Cannot provide LoggableRouter");
+        }
+    }
+
     interface Exposes {
 
         Router router();
@@ -64,5 +77,7 @@ public final class ActivityModule {
         FragmentManager fragmentManager();
 
         PresenterRelay presenterRelay();
+
+        LoggablesRouter loggablesRouter();
     }
 }

@@ -1,11 +1,11 @@
 package oxim.digital.timmeh.application.activity;
 
-import oxim.digital.timmeh.application.ui.LoggableFragment.LoggableFragment;
-import oxim.digital.timmeh.application.ui.fragmented.MainFragment;
+import oxim.digital.timmeh.application.ui.loggableFragment.LoggableFragment;
+import oxim.digital.timmeh.application.ui.newLoggableItem.NewLoggableItemFragment;
 
 public interface FragmentComponentInjects {
 
-    void inject(MainFragment mainFragment);
-
     void inject(LoggableFragment loggableFragment);
+
+    void inject(NewLoggableItemFragment newLoggableItemFragment);
 }

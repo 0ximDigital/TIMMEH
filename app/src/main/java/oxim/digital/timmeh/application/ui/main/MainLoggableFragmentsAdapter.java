@@ -6,7 +6,7 @@ import android.support.v4.app.FragmentStatePagerAdapter;
 
 import java.util.List;
 
-import oxim.digital.timmeh.application.ui.LoggableFragment.LoggableFragment;
+import oxim.digital.timmeh.application.ui.loggableFragment.LoggableFragment;
 import oxim.digital.timmeh.domain.Loggable;
 
 public final class MainLoggableFragmentsAdapter extends FragmentStatePagerAdapter {
@@ -27,6 +27,10 @@ public final class MainLoggableFragmentsAdapter extends FragmentStatePagerAdapte
         }
 
         return LoggableFragment.newInstance(loggables.get(position).key);
+    }
+
+    public String getLoggableKey(final int index) {
+        return loggables.get(index).key;
     }
 
     @Override

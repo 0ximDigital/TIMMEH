@@ -1,4 +1,4 @@
-package oxim.digital.timmeh.application.ui.LoggableFragment;
+package oxim.digital.timmeh.application.ui.loggableFragment;
 
 import oxim.digital.timmeh.application.ui.BasePresenter;
 import oxim.digital.timmeh.data.mapper.LoggableMapper;

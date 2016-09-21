@@ -39,4 +39,11 @@
         app:backgroundTint="@color/iconColors"
         app:rippleColor="@color/cardsBackground"/>
 
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/largest_margin"
+        android:elevation="8dp"/>
+
 </FrameLayout>
