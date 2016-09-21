@@ -5,6 +5,8 @@
     <color name="colorPrimaryDark">#000</color>
     <color name="colorAccent">#FF2461</color>
 
+    <color name="colorPrimary30">#4B212121</color>
+
     <color name="background">#424242</color>
     <color name="cardsBackground">#696969</color>
 
