@@ -8,6 +8,7 @@ import oxim.digital.timmeh.application.ui.LoggableFragment.LoggableContract;
 import oxim.digital.timmeh.application.ui.LoggableFragment.LoggablePresenter;
 import oxim.digital.timmeh.application.ui.fragmented.FragmentedContract;
 import oxim.digital.timmeh.application.ui.fragmented.FragmentedPresenter;
+import oxim.digital.timmeh.data.mapper.LoggableMapper;
 
 @Module
 public final class FragmentPresenterModule {
@@ -24,7 +25,7 @@ public final class FragmentPresenterModule {
     }
 
     @Provides
-    LoggableContract.Presenter provideLoggableFragmentPresenter() {
-        return new LoggablePresenter();
+    LoggableContract.Presenter provideLoggableFragmentPresenter(final LoggableMapper loggableMapper) {
+        return new LoggablePresenter(loggableMapper);
     }
 }

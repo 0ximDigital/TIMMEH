@@ -8,7 +8,8 @@ import oxim.digital.timmeh.application.ApplicationComponent;
         dependencies = {ApplicationComponent.class},
         modules = {
                 ActivityModule.class,
-                ActivityPresenterModule.class
+                ActivityPresenterModule.class,
+                ActivityDataModule.class
         }
 )
 public interface ActivityComponent extends ActivityComponentInjects, ActivityComponentExposes {
@@ -20,6 +21,7 @@ public interface ActivityComponent extends ActivityComponentInjects, ActivityCom
                                           .applicationComponent(applicationComponent)
                                           .activityModule(new ActivityModule(daggerActivity))
                                           .activityPresenterModule(new ActivityPresenterModule())
+                                          .activityDataModule(new ActivityDataModule())
                                           .build();
         }
 

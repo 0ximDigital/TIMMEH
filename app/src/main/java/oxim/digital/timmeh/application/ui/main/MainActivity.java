@@ -2,14 +2,12 @@ package oxim.digital.timmeh.application.ui.main;
 
 import android.os.Bundle;
 import android.support.design.widget.Snackbar;
-import android.support.v4.app.FragmentManager;
 import android.support.v4.view.ViewPager;
 
 import javax.inject.Inject;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
-import butterknife.OnCheckedChanged;
 import butterknife.OnClick;
 import oxim.digital.timmeh.R;
 import oxim.digital.timmeh.application.activity.ActivityComponent;
@@ -22,7 +20,7 @@ public class MainActivity extends MwActivity implements MainContract.View {
     MainContract.Presenter presenter;
 
     @Inject
-    FragmentManager fragmentManager;
+    MainLoggableFragmentsAdapter mainLoggableFragmentsAdapter;
 
     @Bind(R.id.main_view_pager)
     ViewPager viewPager;
@@ -38,8 +36,8 @@ public class MainActivity extends MwActivity implements MainContract.View {
     }
 
     private void setupView() {
-        final MainLoggableFragmentsAdapter adapter = new MainLoggableFragmentsAdapter(fragmentManager);
-        viewPager.setAdapter(adapter);
+        viewPager.setAdapter(mainLoggableFragmentsAdapter);
+        viewPager.setOffscreenPageLimit(mainLoggableFragmentsAdapter.getCount());
     }
 
     @Override

@@ -17,11 +17,11 @@ import oxim.digital.timmeh.R;
 import oxim.digital.timmeh.application.activity.FragmentComponent;
 import oxim.digital.timmeh.application.activity.MwFragment;
 import oxim.digital.timmeh.application.ui.ScopedPresenter;
-import oxim.digital.timmeh.domain.loggables.Loggable;
+import oxim.digital.timmeh.data.model.LoggableViewModel;
 
 public final class LoggableFragment extends MwFragment implements LoggableContract.View {
 
-    private static final String KEY_LOGGABLE = "LOGGABLE";
+    private static final String KEY_LOGGABLE = "LOGGABLE_KEY";
 
     @Inject
     LoggableContract.Presenter presenter;
@@ -35,12 +35,12 @@ public final class LoggableFragment extends MwFragment implements LoggableContra
     @Bind(R.id.loggable_icon)
     ImageView icon;
 
-    private Loggable loggable;
+    private String loggableKey;
 
-    public static LoggableFragment newInstance(final Loggable loggable) {
+    public static LoggableFragment newInstance(final String loggableKey) {
         LoggableFragment fragment = new LoggableFragment();
         final Bundle arguments = new Bundle();
-        arguments.putParcelable(KEY_LOGGABLE, loggable);
+        arguments.putString(KEY_LOGGABLE, loggableKey);
         fragment.setArguments(arguments);
         return fragment;
     }
@@ -53,11 +53,11 @@ public final class LoggableFragment extends MwFragment implements LoggableContra
 
     private void extractArguments() {
         final Bundle arguments = getArguments();
-        if(arguments == null) {
+        if (arguments == null) {
             throw new RuntimeException("Cannot handle null loggable!");
         }
 
-        this.loggable = arguments.getParcelable(KEY_LOGGABLE);
+        this.loggableKey = arguments.getString(KEY_LOGGABLE);
     }
 
     @Nullable
@@ -72,13 +72,14 @@ public final class LoggableFragment extends MwFragment implements LoggableContra
     public void onViewCreated(final View view, @Nullable final Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         presenter.setView(this);
-        populateView();
+        presenter.start(loggableKey);
     }
 
-    private void populateView() {
-        title.setText(loggable.getTitle());
-        subtitle.setText(loggable.getSubtitle());
-        icon.setImageResource(loggable.getIcon());
+    @Override
+    public void fillView(final LoggableViewModel loggableViewModel) {
+        title.setText(loggableViewModel.titleResId);
+        subtitle.setText(loggableViewModel.subtitleResId);
+        icon.setImageResource(loggableViewModel.iconResId);
     }
 
     @Override

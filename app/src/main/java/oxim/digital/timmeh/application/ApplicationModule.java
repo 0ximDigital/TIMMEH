@@ -7,6 +7,8 @@ import javax.inject.Singleton;
 
 import dagger.Module;
 import dagger.Provides;
+import oxim.digital.timmeh.data.LoggableProvider;
+import oxim.digital.timmeh.data.LoggableProviderImpl;
 
 @Module
 public final class ApplicationModule {
@@ -36,6 +38,12 @@ public final class ApplicationModule {
         return timmehApplication.getResources();
     }
 
+    @Provides
+    @Singleton
+    LoggableProvider provideLoggableProvider() {
+        return new LoggableProviderImpl();
+    }
+
     interface Exposes {
 
         TimmehApplication timmehApplication();
@@ -44,5 +52,7 @@ public final class ApplicationModule {
         Context context();
 
         Resources resources();
+
+        LoggableProvider loggableProvider();
     }
 }
